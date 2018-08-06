@@ -5,14 +5,14 @@
 4. Place the provider component
 5. Connect your components
 
-#Reducer
+# Reducer
 - You can only have one reducer in your whole project
 - Simply a two parameter function defined by the user
 - The first argument is the state
 - The second argument is the action
 - It returns a new state
 
-###Example
+### Example
 ```javascript
 let reducer = function (state, action) {
   if (action.type === "addTodo") {
@@ -22,7 +22,7 @@ let reducer = function (state, action) {
 }
 ```
 
-#`createStore`
+# `createStore`
 - This function is supplied by the redux library. It needs to be imported.
 - You can only call this function once in your whole project
 - It takes 3 arguments
@@ -30,7 +30,7 @@ let reducer = function (state, action) {
 - Second argument: initial state
 - Third argument: `window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()`
 
-###Example
+### Example
 ```javascript
 const store = createStore(
   (state, action) => { return {...state, numActions: state.numActions + 1} },
@@ -39,15 +39,15 @@ const store = createStore(
 )
 ```
 
-#`Provider`
+# `Provider`
 - Component supplied by the react-redux library. It needs to be imported.
 - Only used once in your whole project
 - Must be an ancestor of all your connected components
 - Takes one attribute called `store`, the value of that attribute is the store
 
-###Example
+### Example
 
-```javascript
+```html
       <Provider store={store}>
         <div>
           <SomeConnectedComponent>
@@ -56,7 +56,7 @@ const store = createStore(
    
 ```
 
-#`connect`
+# `connect`
 - This function is supplied by the react-redux library. It needs to be imported.
 - `connect` can take 0, 1 or 2 arguments
 - The first argument is a function, typically referred to by a mapStateToProps variable
@@ -64,20 +64,20 @@ const store = createStore(
 - The return value of mapStateToProps is an object. Each property of that object will become a prop in a component
 - `connect` is a function that returns a function.
 
-###Example
+### Example
 ```javascript
 let ConnectedDisplayTodos = connect(function(state) {
     return {actionProp: state.numActions}
 })(SomeComponent)
 ```
 
-#`dispatch`
+# `dispatch`
 - Any connected component has access to this.props.dispatch 
 - Dispatch takes one argument
 - The argument represents an action
 - The reducer is then called with that action
 
-###Example
+### Example
 ```javascript
 this.props.dispatch({
       type: "deletItem", // This would be useful if there were multiple actions
