@@ -1,4 +1,4 @@
-#Integrating redux into react
+# Integrating redux into react
 1. Install the `redux` and `react-redux` libraries
 2. Create a reducer
 3. Create a store
