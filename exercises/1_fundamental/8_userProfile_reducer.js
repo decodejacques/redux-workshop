@@ -8,25 +8,9 @@ class Store {
     }
 }
 
-// This is written by the programmer but I have already defined it for you
-let reducer = function (state, action) {
-    if (action.type === "setUsername") {
-        return { ...state, username: action.name }
-    }
-    if (action.type === "setPassword") {
-        return { ...state, password: action.pwd }
-    }
-    if (action.type === "setFirstName") {
-        return { ...state, firstName: action.name }
-    }
-    if (action.type === "setLastName") {
-        return { ...state, lastName: action.name }
-    }
-    if (action.type === "setAge") {
-        return { ...state, age: action.ageInYears }
-    }
-    return state
-}
+// Insert your code after this line
+
+// Insert your code before this line 
 
 let store = new Store(reducer, {
     username: "rob",
@@ -36,7 +20,6 @@ let store = new Store(reducer, {
     age: 30
 })
 
-// Insert your code after this line
 
 store.dispatch({type:"setUsername", name: "bob"})
 store.dispatch({type:"setPassword", pwd: "password123"})
@@ -44,7 +27,6 @@ store.dispatch({type:"setFirstName", name: "Robert"})
 store.dispatch({type:"setLastName", name: "Dobert"})
 store.dispatch({type:"setAge", ageInYears: 31})
 
-// Insert your code before this line 
 
 if(store.state.username !== "bob"){
     throw new Error("Wrong username")
