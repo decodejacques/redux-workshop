@@ -1,12 +1,11 @@
-let createStore = function (reducer, initialState) {
-    let store = {
-        state: initialState
+class Store {
+    constructor(red, initialState) {
+        this.reducer = red
+        this.state = initialState
     }
-    let disp = function (dispatchedAction) {
-        store.state = reducer(store.state, dispatchedAction)
+    dispatch(dispatchedAction) {
+        this.state = this.reducer(this.state, dispatchedAction)
     }
-    store.dispatch = disp
-    return store
 }
 
 let reducer = function (state, action) {
@@ -19,7 +18,7 @@ let reducer = function (state, action) {
     return state
 }
 
-let store = createStore(reducer, initialState)
+let store = new Store(reducer, { todos: [] })
 
 // Insert your code after this line
 
@@ -30,5 +29,6 @@ store.dispatch({ type: "addTodo", content: "Buy eggs" })
 
 
 if (store.state.todos.length !== 2) {
-    throw new Error("wrong length")
+    throw new Error("Wrong number of todos")
 }
+console.log("Exercise finished")
