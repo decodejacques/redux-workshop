@@ -1,0 +1,47 @@
+let createStore = function (reducer, initialState) {
+    let store = {
+        state: initialState
+    }
+    let disp = function (dispatchedAction) {
+        store.state = reducer(store.state, dispatchedAction)
+    }
+    store.dispatch = disp
+    return store
+}
+
+// This is written by the programmer but I have already defined it for you
+let reducer = function (state, action) {
+    if (action.type === "setEmail") {
+        return { ...state, email: action.content }
+    }
+    if (action.type === "setAddress") {
+        return { ...state, address: action.content }
+    }
+    if (action.type === "setBirthdate") {
+        return { ...state, birthdate: action.content }
+    }
+    return state
+}
+
+let store = createStore(reducer, {})
+
+store.dispatch({type:"setEmail", content: "bob@yahoo.com"})
+
+// Insert your code after this line
+
+store.dispatch({type:"setEmail", content: "bob@yahoo.co.jp"})
+store.dispatch({type:"setAddress", content: "123 elm street"})
+store.dispatch({type:"setBirthdate", content: "5/6/1980"})
+
+
+// Insert your code before this line 
+
+if (store.state.email !== "bob@yahoo.co.jp") {
+    throw new Error("Wrong email")
+}
+if (store.state.address !== "123 elm street") {
+    throw new Error("Wrong address")
+}
+if (store.state.birthdate !== "5/6/1980") {
+    throw new Error("Wrong address")
+}
