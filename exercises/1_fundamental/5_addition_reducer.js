@@ -10,19 +10,6 @@ class Store {
 
 // Insert your code after this line
 
-let reducer = function (state, action) {
-    if (action.type === "subtraction") {
-        return state - action.content
-    }
-    if (action.type === "multiplication") {
-        return state * action.content
-    }
-    if (action.type === "addition") {
-        return state + action.content
-    }
-    return state
-}
-
 // Insert your code before this line
 
 

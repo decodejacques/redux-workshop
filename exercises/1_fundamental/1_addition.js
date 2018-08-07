@@ -22,9 +22,6 @@ let store = new Store(reducer, 5)
 
 // Insert your code after this line
 
-store.dispatch({type: "add", content: 1})
-store.dispatch({type: "add", content: 1})
-
 // Insert your code before this line
 
 if(store.state !== 7) {

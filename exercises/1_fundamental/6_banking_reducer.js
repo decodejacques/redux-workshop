@@ -8,28 +8,9 @@ class Store {
     }
 }
 
-let reducer = function (state, action) {
-    if (action.type === "withdraw") {
-        return {
-            balance: state.balance - action.amount,
-            numTransactions: state.numTransactions + 1
-        }
-    }
-    if (action.type === "deposit") {
-        return {
-            balance: state.balance + action.amount,
-            numTransactions: state.numTransactions + 1
-        }
-    }
-    if (action.type === "withdrawEverything") {
-        return {
-            balance: 0,
-            numTransactions: state.numTransactions + 1
-        }
-    }
+// Insert your code after this line
 
-    return state
-}
+// Insert your code before this line 
 
 let store = new Store(reducer, {
     numTransactions: 0,
@@ -37,14 +18,12 @@ let store = new Store(reducer, {
 })
 
 
-// Insert your code after this line
 
 store.dispatch({ type: "withdrawEverything" })
 store.dispatch({ type: "deposit", amount: 50 })
 store.dispatch({ type: "withdraw", amount: 20 })
 
 
-// Insert your code before this line 
 
 if (store.state.balance !== 30) {
     throw new Error("expected a balance of 30 but got " + this.state)

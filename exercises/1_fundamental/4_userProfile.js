@@ -28,10 +28,6 @@ store.dispatch({type:"setEmail", content: "bob@yahoo.com"})
 
 // Insert your code after this line
 
-store.dispatch({type:"setEmail", content: "bob@yahoo.co.jp"})
-store.dispatch({type:"setAddress", content: "123 elm street"})
-store.dispatch({type:"setBirthdate", content: "5/6/1980"})
-
 // Insert your code before this line 
 
 if (store.state.email !== "bob@yahoo.co.jp") {

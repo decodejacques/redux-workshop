@@ -24,8 +24,6 @@ store.dispatch({ type: "deposit", content: 30 })
 
 // Insert your code after this line
 
-store.dispatch({ type: "withdraw", content: 80 })
-
 // Insert your code before this line 
 
 if (store.state !== 50) {

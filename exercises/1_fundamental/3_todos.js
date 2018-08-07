@@ -22,9 +22,6 @@ let store = new Store(reducer, { todos: [] })
 
 // Insert your code after this line
 
-store.dispatch({ type: "addTodo", content: "Buy milk" })
-store.dispatch({ type: "addTodo", content: "Buy eggs" })
-
 // Insert your code before this line 
 
 
