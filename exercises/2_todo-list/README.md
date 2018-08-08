@@ -5,7 +5,7 @@ In this exercise set you will integrate redux into a react project.
 `npm install`
 
 # Question 1
-This react app currently does not do anything. Integrate react redux. To do this, first follow along this video. Then see if you can do it yourself with the [reference sheet](../reference/README.md)
+This react app currently does not do anything. Integrate react redux. To do this, first follow along this video. Then see if you can do it yourself with the [reference sheet](/reference/README.md)
 
 
 # Question 2
