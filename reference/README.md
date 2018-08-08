@@ -50,7 +50,7 @@ const store = createStore(
 ```JSX
       <Provider store={store}>
         <div>
-          <SomeConnectedComponent>
+          <SomeConnectedComponent/>
         </div>
       </Provider>
    
