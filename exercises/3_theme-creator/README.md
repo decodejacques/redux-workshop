@@ -11,6 +11,10 @@ This react app currently does not do anything. Integrate react redux. Use the re
 
 To get a better feel of what your web app should do, visit the final version [here](http://likeable-stop.surge.sh)
 
+### Solution
+
+An example solution is provided [here](/solutions/3_theme-creator)
+
 # Question 2
 Add a checkbox to toggle the boldness of the text.
 
