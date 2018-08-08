@@ -3,6 +3,7 @@ In this exercise set you will integrate redux into a react project.
 
 # Installation and usage
 `npm install`
+
 `npm start`
 
 # Question 1
@@ -16,7 +17,7 @@ Add a button to reverse the list
 ### Hint
 Here is how you reverse an array without mutation. You'll have to do this in the reducer.
 
-let newArray = originalArray.slice().reverse()
+`let newArray = originalArray.slice().reverse()`
 
 ### Hint 2
 Your reducer will need to be able to process another action
