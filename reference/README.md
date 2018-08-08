@@ -47,7 +47,7 @@ const store = createStore(
 
 ### Example
 
-```jsx
+```JSX
       <Provider store={store}>
         <div>
           <SomeConnectedComponent>
