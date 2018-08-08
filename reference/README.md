@@ -7,7 +7,7 @@
 
 # Reducer
 - You can only have one reducer in your whole project
-- Simply a two parameter function defined by the user
+- It is simply a two parameter function defined by the programmer
 - The first argument is the state
 - The second argument is the action
 - It returns a new state
@@ -18,24 +18,24 @@ let reducer = function (state, action) {
   if (action.type === "addTodo") {
     return { todos: state.todos.concat(action.content) }
   }
-  return state; // The action was not recognized (should not happen)
+  return state; // Needed because react-redux calls your reducer with an @@init action
 }
 ```
 
 # `createStore`
-- This function is supplied by the redux library. It needs to be imported.
-- You can only call this function once in your whole project
+- This function is supplied by the redux library. It needs to be imported
+- Only call this function once in your whole project
 - It takes 3 arguments
 - First argument: reducer (see above)
 - Second argument: initial state
-- Third argument: `window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()`
+- Third argument (needed for redux devtools): `window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()`
 
 ### Example
 ```javascript
 const store = createStore(
-  (state, action) => { return {...state, numActions: state.numActions + 1} },
-  { todos: [] }, // The initial state
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // Needed for the redux devtools extension
+  (state, action) => { return {...state, numActions: state.numActions + 1} }, // reducer
+  { todos: [] }, // initial state
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 ```
 
