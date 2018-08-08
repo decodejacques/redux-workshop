@@ -1,5 +1,5 @@
 # Description
-In this exercise set you will integrate redux into a react project. 
+In this exercise set you will integrate redux into a react project.
 
 # Installation and usage
 `npm install`
@@ -7,6 +7,8 @@ In this exercise set you will integrate redux into a react project.
 
 # Question 1
 This react app currently does not do anything. You need to integrate react redux. To do this, first follow along this [video](https://youtu.be/NTSIFinXOs8). Then see if you can do it yourself with the [reference sheet](/reference/README.md)
+
+To get a better feel of what your web app should do, visit the final version [here](http://spiritual-dolls.surge.sh)
 
 # Question 2
 Add a button to reverse the list
