@@ -26,7 +26,7 @@ store.dispatch({ type: "withdraw", amount: 20 })
 
 
 if (store.state.balance !== 30) {
-    throw new Error("expected a balance of 30 but got " + this.state)
+    throw new Error("expected a balance of 30 but got " + store.state)
 }
 
 if (store.state.numTransactions !== 3) {
