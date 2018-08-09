@@ -27,7 +27,7 @@ store.dispatch({ type: "deposit", content: 30 })
 // Insert your code before this line 
 
 if (store.state !== 50) {
-    throw new Error("expected a balance of 50 but got " + this.state)
+    throw new Error("expected a balance of 50 but got " + store.state)
 }
 
 console.log("Exercise finished")
