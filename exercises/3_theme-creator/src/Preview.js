@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import { connect } from 'react-redux'
 
 class Preview extends Component {
 
   render() {
     let myFontStyle = "normal"
-    if (this.props.italicStatus) {
-      myFontStyle = "italic"
-    }
     let myStyle = {
       height: "100vh",
       width: "50vh",
       padding: "30px",
-      backgroundColor: this.props.background,
-      fontFamily: this.props.fontFamily,
       fontStyle: myFontStyle
     }
     return (
@@ -25,14 +19,6 @@ class Preview extends Component {
   }
 }
 
-let mapStateToProps = function (state) {
-  return {
-    background: state.bgcolor,
-    fontFamily: state.fontName,
-    italicStatus: state.isItalic
-  }
-}
 
-let ConnectedPreview = connect(mapStateToProps)(Preview)
 
-export default ConnectedPreview;
+export default Preview;

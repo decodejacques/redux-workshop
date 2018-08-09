@@ -7,9 +7,7 @@ class Clickable extends Component {
     super(props)
     this.handleClick = this.handleClick.bind(this)
   }
-  handleClick() {
-    this.props.dispatch({type: 'click'})
-  }
+  handleClick() {}
   render() {
     return (
       <button onClick={this.handleClick}> Click </button>
@@ -17,5 +15,4 @@ class Clickable extends Component {
   }
 }
 
-let ConnectedClickable = connect()(Clickable)
-export default ConnectedClickable;
+export default Clickable;

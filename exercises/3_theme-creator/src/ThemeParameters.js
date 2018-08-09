@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { connect } from 'react-redux'
+
 
 class ThemeParameters extends Component {
   constructor(props) {
@@ -10,18 +10,10 @@ class ThemeParameters extends Component {
     this.timesNewRoman = this.timesNewRoman.bind(this)
     this.italic = this.italic.bind(this)
   }
-  color(evt) {
-    this.props.dispatch({ type: 'changeColor', color: evt.target.value })
-  }
-  arial() {
-    this.props.dispatch({ type: 'changeFont', font: "Arial" })
-  }
-  timesNewRoman() {
-    this.props.dispatch({ type: 'changeFont', font: "timesNewRoman" })
-  }
-  italic(evt) {
-    this.props.dispatch({ type: 'changeItalic', italic: evt.target.checked })
-  }
+  color(evt) { }
+  arial() { }
+  timesNewRoman() { }
+  italic(evt) { }
   render() {
     return (
       <div>
@@ -41,6 +33,4 @@ class ThemeParameters extends Component {
   }
 }
 
-let ConnectedThemeParameters = connect()(ThemeParameters)
-
-export default ConnectedThemeParameters;
+export default ThemeParameters;
