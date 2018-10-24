@@ -14,7 +14,7 @@ Install the redux and react-redux libraries
 Here are the most important values to be imported from the libraries:
 ```javascript
 import { connect, Provider } from 'react-redux'
-import { createStore } from 'react'
+import { createStore } from 'redux'
 ```
 
 # Reducer
