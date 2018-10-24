@@ -1,9 +1,22 @@
 # Integrating redux into react
 1. Install the `redux` and `react-redux` libraries
-2. Create a reducer
-3. Create a store
-4. Place the provider component
-5. Connect your components
+2. Import `createStore`, `Provider` and `connect`
+3. Create a reducer
+4. Create a store
+5. Place the provider component
+6. Connect your components
+
+# Installation
+Install the redux and react-redux libraries
+`npm install redux`
+`npm install react-redux`
+
+You will also need to import several values
+
+```javascript
+import { connect, Provider } from 'react-redux'
+import { createStore } from 'react'
+```
 
 # Reducer
 - You can only have one reducer in your whole project
