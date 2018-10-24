@@ -23,6 +23,6 @@ Add a button to change the text on the left hand side to a randomly generated st
 
 ### Hint
 
-- [Generating random strings](http://lmgtfy.com/?q=generate+random+string+javascript)
+- [Generating random strings (copy pasting allowed)](http://lmgtfy.com/?q=generate+random+string+javascript)
 - The string on the left hand side will go into the state
 - You will need to add something to the parameter of the connect in [Preview.js](./Preview.js).
