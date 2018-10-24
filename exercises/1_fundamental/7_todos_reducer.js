@@ -10,6 +10,9 @@ class Store {
 
 // Insert your code after this line
 
+// HINT: Make a new array from an existing array:                    someArray.slice(firstIndex, lastIndex) 
+// HINT: Create a new array that's the reverse of an existing array: someArray.slice().reverse()
+
 // Insert your code before this line
 
 
