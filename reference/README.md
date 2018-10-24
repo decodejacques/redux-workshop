@@ -11,8 +11,7 @@ Install the redux and react-redux libraries
 `npm install redux`
 `npm install react-redux`
 
-You will also need to import several values
-
+Here are the most important values to be imported from the libraries:
 ```javascript
 import { connect, Provider } from 'react-redux'
 import { createStore } from 'react'
