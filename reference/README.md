@@ -92,7 +92,7 @@ let ConnectedDisplayTodos = connect(function(state) {
 ### Example
 ```javascript
 this.props.dispatch({
-      type: "deletItem", // This would be useful if there were multiple actions
+      type: "deletItem",
       itemNumber: 5
     })
 ```
