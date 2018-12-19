@@ -1,4 +1,5 @@
 # Integrating redux into react
+
 1. Install the `redux` and `react-redux` libraries
 2. Import `createStore`, `Provider` and `connect`
 3. Create a reducer
@@ -7,17 +8,20 @@
 6. Connect your components
 
 # Installation
+
 Install the redux and react-redux libraries
 `npm install redux`
 `npm install react-redux`
 
 Here are the most important values to be imported from the libraries:
+
 ```javascript
-import { connect, Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { connect, Provider } from "react-redux";
+import { createStore } from "redux";
 ```
 
 # Reducer
+
 - You can only have one reducer in your whole project
 - It is simply a two parameter function defined by the programmer
 - The first argument is the state
@@ -25,16 +29,18 @@ import { createStore } from 'redux'
 - It returns a new state
 
 ### Example
+
 ```javascript
-let reducer = function (state, action) {
+let reducer = function(state, action) {
   if (action.type === "addTodo") {
-    return { todos: state.todos.concat(action.content) }
+    return { todos: state.todos.concat(action.content) };
   }
   return state; // Needed because react-redux calls your reducer with an @@init action
-}
+};
 ```
 
 # `createStore`
+
 - This function is supplied by the redux library. It needs to be imported
 - Only call this function once in your whole project
 - It takes 3 arguments
@@ -43,15 +49,19 @@ let reducer = function (state, action) {
 - Third argument (needed for redux devtools): `window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()`
 
 ### Example
+
 ```javascript
 const store = createStore(
-  (state, action) => { return {...state, numActions: state.numActions + 1} }, // reducer
+  function(state, action) {
+    return { ...state, numActions: state.numActions + 1 };
+  }, // reducer
   { todos: [] }, // initial state
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
+);
 ```
 
 # `Provider`
+
 - Component supplied by the react-redux library. It needs to be imported.
 - Only used once in your whole project
 - Must be an ancestor of all your connected components
@@ -65,10 +75,11 @@ const store = createStore(
           <SomeConnectedComponent/>
         </div>
       </Provider>
-   
+
 ```
 
 # `connect`
+
 - This function is supplied by the react-redux library. It needs to be imported.
 - `connect` can take 0, 1 or 2 arguments
 - The first argument is a function, typically referred to by a mapStateToProps variable
@@ -77,22 +88,25 @@ const store = createStore(
 - `connect` is a function that returns a function.
 
 ### Example
+
 ```javascript
 let ConnectedDisplayTodos = connect(function(state) {
-    return {actionProp: state.numActions}
-})(SomeComponent)
+  return { actionProp: state.numActions };
+})(SomeComponent);
 ```
 
 # `dispatch`
-- Any connected component has access to this.props.dispatch 
+
+- Any connected component has access to this.props.dispatch
 - Dispatch takes one argument
 - The argument represents an action
 - The reducer is then called with that action
 
 ### Example
+
 ```javascript
 this.props.dispatch({
-      type: "deletItem",
-      itemNumber: 5
-    })
+  type: "deletItem",
+  itemNumber: 5
+});
 ```
