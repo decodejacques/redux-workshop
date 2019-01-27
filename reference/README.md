@@ -66,15 +66,13 @@ const store = createStore(
 - Only used once in your whole project
 - Must be an ancestor of all your connected components
 - Takes one attribute called `store`, the value of that attribute is the store
-
+- The easiest place to put it is as the top level component in the index.js file
 ### Example
 
 ```JSX
-      <Provider store={store}>
-        <div>
-          <SomeConnectedComponent/>
-        </div>
-      </Provider>
+      ReactDOM.render(<Provider store={store}>
+        <App/>
+      </Provider>, document.getElementById("root"))
 
 ```
 
@@ -90,9 +88,10 @@ const store = createStore(
 ### Example
 
 ```javascript
-let ConnectedDisplayTodos = connect(function(state) {
+let mapStateToProps = function(state) {
   return { actionProp: state.numActions };
-})(SomeComponent);
+}
+let ConnectedDisplayTodos = connect(mapStateToProps)(SomeComponent);
 ```
 
 # `dispatch`
@@ -100,7 +99,7 @@ let ConnectedDisplayTodos = connect(function(state) {
 - Any connected component has access to this.props.dispatch
 - Dispatch takes one argument
 - The argument represents an action
-- The reducer is then called with that action
+- The reducer is then called with that action and the current state
 
 ### Example
 
