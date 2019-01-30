@@ -10,7 +10,7 @@ class Store {
 
 let reducer = function (state, action) {
     if (action.type === "clearList") {
-        return { todos: todos }
+        return { todos: [] }
     }
     if (action.type === "addTodo") {
         return { todos: state.todos.concat(action.content) }
