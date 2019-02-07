@@ -52,10 +52,8 @@ let reducer = function(state, action) {
 
 ```javascript
 const store = createStore(
-  function(state, action) {
-    return { ...state, numActions: state.numActions + 1 }
-  }, // reducer
-  { todos: [] }, // initial state
+  reducer, // reducer
+  {}, // initial state (in this case, empty)
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 ```
