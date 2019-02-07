@@ -122,7 +122,7 @@ In the following diagram I put the flow of information. Each step is labeled. St
 # Associations
 
 In the following diagram I label each property name or string that must be equal.
-![alt text](./flow.jpg)
+![alt text](./associations.jpg)
 
 1. Each action that is dispatched must have a type property. The reducer will then be able to look at the action type to determine how to handle the action.
 2. The programmer has picked a unique string, `"set-messages"` to identify this action. This is because there might be many different actions that are dispatched. In the reducer we can check that the type of an action matches this unique string.
