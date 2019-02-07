@@ -113,7 +113,7 @@ this.props.dispatch({
 
 # Information flow
 
-In the following diagram I put the flow of information. Step 1 happens first, then step 2, etc...
+In the following diagram I put the flow of information. Each step is labeled. Step 1 happens first, then step 2, etc...
 ![alt text](./flow.jpg)
 
 1. First dispatch is called on line 19. The argument of the dispatch is an object which describes how the store is to be modified. We call this object the action.
@@ -122,6 +122,9 @@ In the following diagram I put the flow of information. Step 1 happens first, th
 4. The component is re rendered because its props has changed. The updated value of appSid is available.
 
 # Associations
+
+In the following diagram I label each property name or string that must be equal.
+![alt text](./flow.jpg)
 
 1. Each action that is dispatched must have a type property. The reducer will then be able to look at the action type to determine how to handle the action.
 2. The programmer has picked a unique string, `"set-messages"` to identify this action. This is because there might be many different actions that are dispatched. In the reducer we can check that the type of an action matches this unique string.
