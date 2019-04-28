@@ -11,10 +11,10 @@ class ThemeParameters extends Component {
     this.italic = this.italic.bind(this)
   }
   color(evt) { }
-  arial() { }
-  timesNewRoman() { }
+  arial = () => { }
+  timesNewRoman= () => { }
   italic(evt) { }
-  render() {
+  render= () => {
     return (
       <div>
         <div> Pick your color

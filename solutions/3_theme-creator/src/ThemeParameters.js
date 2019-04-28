@@ -13,16 +13,16 @@ class ThemeParameters extends Component {
   color(evt) {
     this.props.dispatch({ type: 'changeColor', color: evt.target.value })
   }
-  arial() {
+  arial = () => {
     this.props.dispatch({ type: 'changeFont', font: "Arial" })
   }
-  timesNewRoman() {
+  timesNewRoman= () => {
     this.props.dispatch({ type: 'changeFont', font: "timesNewRoman" })
   }
   italic(evt) {
     this.props.dispatch({ type: 'changeItalic', italic: evt.target.checked })
   }
-  render() {
+  render= () => {
     return (
       <div>
         <div> Pick your color

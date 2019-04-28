@@ -4,7 +4,7 @@ import Preview from "./Preview.js";
 import ThemeParameters from "./ThemeParameters.js";
 
 class App extends Component {
-  render() {
+  render= () => {
     return (
       <div style={{ display: "flex" }}>
         <Preview />

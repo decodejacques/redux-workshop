@@ -3,12 +3,12 @@ import './App.css';
 import { connect } from 'react-redux'
 
 class Status extends Component {
-  componentDidMount() {
+  componentDidMount= () => {
     setTimeout(() => {
       this.props.dispatch({type: 'timesUp'})
     }, 1000)
   }
-  render() {
+  render= () => {
     if (this.props.lost) {
       return (<div> You lost </div>)
     }

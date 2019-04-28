@@ -3,7 +3,7 @@ class Store {
         this.reducer = red
         this.state = initialState
     }
-    dispatch(dispatchedAction) {
+    dispatch = (dispatchedAction) => {
         this.state = this.reducer(this.state, dispatchedAction)
     }
 }
@@ -24,7 +24,7 @@ let reducer = function (state, action) {
 
 let store = new Store(reducer, {})
 
-store.dispatch({type:"setEmail", content: "bob@yahoo.com"})
+store.dispatch({ type: "setEmail", content: "bob@yahoo.com" })
 
 // Insert your code after this line
 

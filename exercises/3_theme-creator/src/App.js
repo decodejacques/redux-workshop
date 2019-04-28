@@ -5,12 +5,12 @@ import ThemeParameters from './ThemeParameters.js'
 
 
 class App extends Component {
-  render() {
+  render = () => {
     return (
-        <div style={{display: "flex"}}>
-          <Preview/>
-          <ThemeParameters/>
-        </div>
+      <div style={{ display: "flex" }}>
+        <Preview />
+        <ThemeParameters />
+      </div>
     );
   }
 }

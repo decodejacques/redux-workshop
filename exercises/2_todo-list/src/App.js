@@ -5,12 +5,12 @@ import DisplayTodos from './DisplayTodos.js'
 import InputTodo from './InputTodo.js'
 
 class App extends Component {
-  render() {
+  render = () => {
     return (
-        <div>
-          <DisplayTodos />
-          <InputTodo />
-        </div>
+      <div>
+        <DisplayTodos />
+        <InputTodo />
+      </div>
     );
   }
 }

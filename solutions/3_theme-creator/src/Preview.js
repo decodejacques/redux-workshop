@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 class Preview extends Component {
 
-  render() {
+  render = () => {
     let myFontStyle = "normal"
     if (this.props.italicStatus) {
       myFontStyle = "italic"

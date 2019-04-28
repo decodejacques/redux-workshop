@@ -3,7 +3,7 @@ import './App.css';
 
 class Preview extends Component {
 
-  render() {
+  render = () => {
     let myFontStyle = "normal"
     let myStyle = {
       height: "100vh",

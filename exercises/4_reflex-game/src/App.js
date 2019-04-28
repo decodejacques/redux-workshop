@@ -6,12 +6,12 @@ import Status from './Status.js'
 
 
 class App extends Component {
-  render() {
+  render = () => {
     return (
-        <div className="App">
-          <Clickable />
-          <Status />
-        </div>
+      <div className="App">
+        <Clickable />
+        <Status />
+      </div>
     );
   }
 }

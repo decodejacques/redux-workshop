@@ -3,7 +3,7 @@ class Store {
         this.reducer = red
         this.state = initialState
     }
-    dispatch(dispatchedAction) {
+    dispatch = (dispatchedAction) => {
         this.state = this.reducer(this.state, dispatchedAction)
     }
 }
@@ -16,13 +16,13 @@ class Store {
 let store = new Store(reducer, 5)
 
 
-store.dispatch({type: "subtraction", content: 3})
-store.dispatch({type: "multiplication", content: 2})
-store.dispatch({type: "addition", content: 2})
+store.dispatch({ type: "subtraction", content: 3 })
+store.dispatch({ type: "multiplication", content: 2 })
+store.dispatch({ type: "addition", content: 2 })
 
 
 
-if(store.state !== 6) {
+if (store.state !== 6) {
     throw new Error("Expecting a state of 6 but ended up with a state of " + store.state)
 }
 console.log("Exercise finished")

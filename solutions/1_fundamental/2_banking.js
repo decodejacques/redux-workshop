@@ -3,14 +3,14 @@ class Store {
         this.reducer = red
         this.state = initialState
     }
-    dispatch(dispatchedAction) {
+    dispatch = (dispatchedAction) => {
         this.state = this.reducer(this.state, dispatchedAction)
     }
 }
 
 let reducer = function (state, action) {
     if (action.type === "withdraw") {
-        return state - action.content 
+        return state - action.content
     }
     if (action.type === "deposit") {
         return state + action.content

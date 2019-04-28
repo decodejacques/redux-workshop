@@ -4,7 +4,7 @@ import Clickable from "./Clickable.js";
 import Status from "./Status.js";
 
 class App extends Component {
-  render() {
+  render= () => {
     return (
       <div className="App">
         <Clickable />

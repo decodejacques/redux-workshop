@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 class DisplayTodos extends Component {
-  render() {
+  render = () => {
     return (<div> I need to get implemented </div>)
   }
 }

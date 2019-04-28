@@ -10,4 +10,4 @@ Your job: for each of the previous questions, remove `this.props.dispatch` and u
 
 # Question 2
 
-Currently, we're creating objects to be used as actions whenever we need them (typically when we call `this.props.dispatch`). The industry standard is to put all your actions in a separate file, as described in [this document](https://redux.js.org/basics/actions). For each of the previous react redux exercises, put all your actions in separate files.
+Currently, we're creating objects to be used as actions whenever we need them (typically when we call `this.props.dispatch`). The industry standard is to put all your actions in a separate file, as described in [this document](https://redux.js.org/basics/actions). For each of the previous react redux exercises, put all your actions in a separate file.

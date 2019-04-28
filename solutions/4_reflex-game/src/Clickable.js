@@ -7,10 +7,10 @@ class Clickable extends Component {
     super(props)
     this.handleClick = this.handleClick.bind(this)
   }
-  handleClick() {
-    this.props.dispatch({type: 'click'})
+  handleClick = () => {
+    this.props.dispatch({ type: 'click' })
   }
-  render() {
+  render= () => {
     return (
       <button onClick={this.handleClick}> Click </button>
     );

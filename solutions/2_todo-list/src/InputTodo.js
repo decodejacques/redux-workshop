@@ -22,7 +22,7 @@ class InputTodo extends Component {
   handleChange(evt) {
     this.setState({ inputValue: evt.target.value })
   }
-  render() {
+  render = () => {
     return (<form onSubmit={this.handleSubmit}>
       <input onChange={this.handleChange} />
       <input type="submit" />

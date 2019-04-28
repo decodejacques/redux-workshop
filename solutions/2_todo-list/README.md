@@ -391,7 +391,7 @@ For example:
 import React, { Component } from 'react';
 
 class Button extends Component {
-  render() {
+  render= () => {
     // ...
   }
 }
@@ -407,7 +407,7 @@ import React, { Component } from 'react';
 import Button from './Button'; // Import a component from another file
 
 class DangerButton extends Component {
-  render() {
+  render= () => {
     return <Button color="red" />;
   }
 }
@@ -458,7 +458,7 @@ class App extends Component {
       });
   };
 
-  render() {
+  render= () => {
     return (
       <div>
         <button onClick={this.handleClick}>Load</button>
@@ -499,7 +499,7 @@ import React, { Component } from 'react';
 import './Button.css'; // Tell Webpack that Button.js uses these styles
 
 class Button extends Component {
-  render() {
+  render= () => {
     // You can use them as regular CSS styles
     return <div className="Button" />;
   }
@@ -718,7 +718,7 @@ When you run `npm run build`, Create React App will substitute `%PUBLIC_URL%` wi
 In JavaScript code, you can use `process.env.PUBLIC_URL` for similar purposes:
 
 ```js
-render() {
+render= () => {
   // Note: this is an escape hatch and should be used sparingly!
   // Normally we recommend using `import` for getting asset URLs
   // as described in “Adding Images and Fonts” above this section.
@@ -865,7 +865,7 @@ First, you need to have environment variables defined. For example, let’s say 
 in the environment inside a `<form>`:
 
 ```jsx
-render() {
+render= () => {
   return (
     <div>
       <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>
