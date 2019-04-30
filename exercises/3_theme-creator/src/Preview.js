@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 
 class Preview extends Component {
-
   render = () => {
     let myFontStyle = "normal"
     let myStyle = {

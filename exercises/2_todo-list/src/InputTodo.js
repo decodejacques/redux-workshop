@@ -4,18 +4,12 @@ import './App.css';
 
 
 class InputTodo extends Component {
-  constructor(props) {
-    super(props)
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleChange = this.handleChange.bind(this)
-
-  }
-  handleSubmit(evt) {
+  handleSubmit = (evt) => {
     evt.preventDefault()
 
     // You need to add code here
   }
-  handleChange(evt) {
+  handleChange = (evt) => {
     this.setState({ inputValue: evt.target.value })
   }
   render = () => {

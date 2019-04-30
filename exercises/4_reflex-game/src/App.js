@@ -3,8 +3,6 @@ import './App.css';
 import Clickable from './Clickable.js'
 import Status from './Status.js'
 
-
-
 class App extends Component {
   render = () => {
     return (

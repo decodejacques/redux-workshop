@@ -8,9 +8,11 @@ class Clickable extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
   handleClick = () => { }
-  render= () => {
+  render = () => {
     return (
-      <button onClick={this.handleClick}> Click </button>
+      <button onClick={this.handleClick}>
+        Click
+      </button>
     );
   }
 }

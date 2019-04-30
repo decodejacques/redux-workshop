@@ -5,16 +5,12 @@ import './App.css';
 class ThemeParameters extends Component {
   constructor(props) {
     super(props)
-    this.color = this.color.bind(this)
-    this.arial = this.arial.bind(this)
-    this.timesNewRoman = this.timesNewRoman.bind(this)
-    this.italic = this.italic.bind(this)
   }
-  color(evt) { }
+  color = (evt) => { }
   arial = () => { }
-  timesNewRoman= () => { }
-  italic(evt) { }
-  render= () => {
+  timesNewRoman = () => { }
+  italic = (evt) => { }
+  render = () => {
     return (
       <div>
         <div> Pick your color
