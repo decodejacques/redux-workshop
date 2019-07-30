@@ -31,7 +31,7 @@ import { createStore } from "redux"
 ### Example
 
 ```javascript
-let reducer = function(state, action) {
+let reducer = (state, action) => {
   if (action.type === "addTodo") {
     return { todos: state.todos.concat(action.content) }
   }
@@ -87,7 +87,7 @@ const store = createStore(
 ### Example
 
 ```javascript
-let mapStateToProps = function(state) {
+let mapStateToProps = state => {
   return { actionProp: state.numActions }
 }
 let ConnectedDisplayTodos = connect(mapStateToProps)(SomeComponent)
