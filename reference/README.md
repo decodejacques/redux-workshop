@@ -129,3 +129,5 @@ In the following diagram I label each property name or string that must be equal
 3. The action can also contain other information. We can then use this information to modify the state in the reducer. The property name `actionSid` was picked by the programmer.
 4. `sid` is a property name that was picked by the user to label the part of the state that is concerned with session ids.
 5. `appSid` was picked by the programmer as the name of the props used to access the `sid` property of the state.
+
+There is a small typo in this image. Can you find it?
