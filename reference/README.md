@@ -78,8 +78,8 @@ const store = createStore(
 # `connect`
 
 - This function is supplied by the react-redux library. It needs to be imported.
-- `connect` can take 0, 1 or 2 arguments
-- The first argument is a function, typically referred to by a mapStateToProps variable
+- `connect` takes an optional argument
+- The optional argument is a function, typically referred to by a mapStateToProps variable
 - mapStateToProps takes 1 parameter. That parameter represents the state
 - The return value of mapStateToProps is an object. Each property of that object will become a prop in a component
 - `connect` is a function that returns a function.
