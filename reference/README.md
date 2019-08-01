@@ -125,7 +125,7 @@ In the following diagram I label each property name or string that must be equal
 ![alt text](./associations.jpg)
 
 1. Each action that is dispatched must have a type property. The reducer will then be able to look at the action type to determine how to handle the action.
-2. The programmer has picked a unique string, `"set-messages"` to identify this action. This is because there might be many different actions that are dispatched. In the reducer we can check that the type of an action matches this unique string.
+2. The programmer has picked a unique string, `"set-session-id"` to identify this action. This is because there might be many different actions that are dispatched. In the reducer we can check that the type of an action matches this unique string.
 3. The action can also contain other information. We can then use this information to modify the state in the reducer. The property name `actionSid` was picked by the programmer.
 4. `sid` is a property name that was picked by the user to label the part of the state that is concerned with session ids.
 5. `appSid` was picked by the programmer as the name of the props used to access the `sid` property of the state.
