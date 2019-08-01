@@ -11,7 +11,7 @@
 
 Install the redux and react-redux libraries
 `npm install redux`
-`npm install react-redux`
+`npm install react-redux@6.0.1`
 
 Here are the most important values to be imported from the libraries:
 
