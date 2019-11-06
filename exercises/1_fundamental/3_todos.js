@@ -2,7 +2,6 @@ class Store {
     constructor(red, initialState) {
         this.reducer = red
         this.state = initialState
-        this.dispatch = this.dispatch.bind(this) // some magic
     }
     dispatch(dispatchedAction) {
         this.state = this.reducer(this.state, dispatchedAction)
