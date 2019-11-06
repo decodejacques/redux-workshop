@@ -2,9 +2,8 @@ class Store {
     constructor(red, initialState) {
         this.reducer = red
         this.state = initialState
-        this.dispatch = this.dispatch.bind(this) // some magic
     }
-    dispatch(dispatchedAction) { // it's not an arrow function, so we need to use the above magic. Arrow methods are not supported by nodejs.
+    dispatch(dispatchedAction) { // it's not an arrow function. Arrow methods are not supported by nodejs.
         this.state = this.reducer(this.state, dispatchedAction)
     }
 }
