@@ -1,25 +1,28 @@
-import React, { Component } from 'react';
-import './App.css';
-
-
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import "./App.css";
 
 class InputTodo extends Component {
-  handleSubmit = (evt) => {
-    evt.preventDefault()
-
-    // You need to add code here
+  constructor(props) {
+    super(props);
+    this.state = { inputValue: "" };
   }
-  handleChange = (evt) => {
-    this.setState({ inputValue: evt.target.value })
-  }
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.dispatch({ type: "addTodo", todoItem: this.state.inputValue });
+    this.setState({ inputValue: "" });
+  };
+  handleChange = e => {
+    this.setState({ inputValue: e.target.value });
+  };
   render = () => {
-    return (<form onSubmit={this.handleSubmit}>
-      <input onChange={this.handleChange} />
-      <input type="submit" />
-    </form>)
-  }
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <input onChange={this.handleChange} value={this.state.inputValue} />
+        <input type="submit" />
+      </form>
+    );
+  };
 }
 
-
-
-export default InputTodo;
+export default connect()(InputTodo);
