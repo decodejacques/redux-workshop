@@ -2,7 +2,8 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "addTodo":
       return { todos: state.todos.concat(action.todoItem) };
-    // case "reverseTodos":
+    case "reverseTodos":
+      return { todos: state.todos.slice().reverse() };
     default:
       return state;
   }

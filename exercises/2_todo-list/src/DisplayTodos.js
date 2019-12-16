@@ -4,6 +4,9 @@ import "./App.css";
 
 // This component doesn't use any data in the store! Fix this.
 class DisplayTodos extends Component {
+  reverseList = () => {
+    this.props.dispatch({ type: "reverseTodos" });
+  };
   render = () => {
     return (
       <div>
@@ -12,6 +15,9 @@ class DisplayTodos extends Component {
             <div>{todoItem}</div>
           ))}
         </ul>
+        {this.props.todosList.length > 1 ? (
+          <button onClick={this.reverseList}>Reverse</button>
+        ) : null}
       </div>
     );
   };
