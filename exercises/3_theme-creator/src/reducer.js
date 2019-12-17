@@ -1,3 +1,5 @@
+import { loremIpsum } from "lorem-ipsum";
+
 let reducer = (state, action) => {
   switch (action.type) {
     case "backgroundColorChange":
@@ -16,6 +18,11 @@ let reducer = (state, action) => {
       return {
         ...state,
         style: { ...state.style, fontWeight: action.content }
+      };
+    case "generateText":
+      return {
+        ...state,
+        text: loremIpsum({ count: 3 })
       };
     default:
       return state;

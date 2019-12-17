@@ -54,6 +54,11 @@ class ThemeParameters extends Component {
       });
     }
   };
+  generateText = () => {
+    this.props.dispatch({
+      type: "generateText"
+    });
+  };
   render = () => {
     return (
       <div>
@@ -88,6 +93,9 @@ class ThemeParameters extends Component {
         </div>
         <div>
           <input type="checkbox" onChange={this.bold} /> bold
+        </div>
+        <div>
+          <button onClick={this.generateText}>Generate new text</button>
         </div>
       </div>
     );

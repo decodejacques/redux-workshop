@@ -10,19 +10,12 @@ class Preview extends Component {
       width: "50vh",
       padding: "30px"
     };
-    return (
-      <div style={myStyle}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-        sollicitudin sem et ante luctus sodales. Vivamus mi eros, fringilla et
-        felis vitae, efficitur efficitur justo. Praesent dolor mauris, ultrices
-        vel justo ac, sagittis
-      </div>
-    );
+    return <div style={myStyle}>{this.props.text}</div>;
   };
 }
 
 let mapStateToProps = state => {
-  return { style: state.style };
+  return { style: state.style, text: state.text };
 };
 
 export default connect(mapStateToProps)(Preview);
