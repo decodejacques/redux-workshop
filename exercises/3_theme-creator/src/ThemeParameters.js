@@ -41,6 +41,19 @@ class ThemeParameters extends Component {
       });
     }
   };
+  bold = e => {
+    if (e.target.checked) {
+      this.props.dispatch({
+        type: "fontWeightChange",
+        content: "bold"
+      });
+    } else {
+      this.props.dispatch({
+        type: "fontWeightChange",
+        content: "normal"
+      });
+    }
+  };
   render = () => {
     return (
       <div>
@@ -72,6 +85,9 @@ class ThemeParameters extends Component {
         </div>
         <div>
           <input type="checkbox" onChange={this.italic} /> italic
+        </div>
+        <div>
+          <input type="checkbox" onChange={this.bold} /> bold
         </div>
       </div>
     );

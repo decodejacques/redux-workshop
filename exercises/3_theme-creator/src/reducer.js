@@ -12,6 +12,11 @@ let reducer = (state, action) => {
       };
     case "fontStyleChange":
       return { ...state, style: { ...state.style, fontStyle: action.content } };
+    case "fontWeightChange":
+      return {
+        ...state,
+        style: { ...state.style, fontWeight: action.content }
+      };
     default:
       return state;
   }
