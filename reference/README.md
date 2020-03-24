@@ -93,9 +93,27 @@ store.dispatch({
 })
 ```
 
+# `useSelector`
+
+- Takes a function as an argument
+- That function is called every time the state of the store changes
+  - Which is when the reducer has finished processing an action
+- The component is rerendered whenever the value returned by that function changes
+- useSelector returns the return value of function call of its argument
+- It is used to get information from the state of the store
+
+### Example
+
+```javascript
+useSelector(st => {
+  return st.email
+})
+```
+
+
 # Information flow
 
-In the following diagram I put the flow of information. Each step is labeled. Step 1 happens first, then step 2, etc...
+In the following diagram I put the flow of information. Each step is labeled. Step 1 happens first, then step 2, then step 3.
 ![alt text](./flow.png)
 
 1. First dispatch is called. The argument of the dispatch is an object which describes how the store is to be modified. We call this object the action.
